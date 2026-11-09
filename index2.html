@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การประยุกต์ใช้ AI - การประยุกต์ใช้ 3 ด้าน</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Prompt -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #0B0F19;
+            color: #F3F4F6;
+        }
+        /* เมนู Active Highlight สำหรับหน้า 2 */
+        .active-tab {
+            background-color: #06B6D4 !important;
+            color: #0B0F19 !important;
+            font-weight: 600;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-gray-900/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3 cursor-pointer" onclick="location.href='index.html'">
+                    <div class="p-2.5 bg-cyan-500/10 border border-cyan-500/30 rounded-xl text-cyan-400">
+                        <i data-lucide="cpu" class="w-7 h-7"></i>
+                    </div>
+                    <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
+                        AI Application Portal
+                    </span>
+                </div>
+
+                <!-- Desktop Menu (หน้า 2 เป็น Active Tab สว่างเด่น) -->
+                <nav class="hidden md:flex space-x-2 bg-gray-950 p-1.5 rounded-xl border border-gray-800">
+                    <button onclick="location.href='index.html'" class="nav-btn px-5 py-2 rounded-lg text-sm text-gray-300 hover:text-white transition-all duration-200">
+                        หน้าแรก
+                    </button>
+                    <button onclick="location.href='apps.html'" class="nav-btn px-5 py-2 rounded-lg text-sm transition-all duration-200 active-tab">
+                        การประยุกต์ใช้ 3 ด้าน
+                    </button>
+                    <button onclick="location.href='contact.html'" class="nav-btn px-5 py-2 rounded-lg text-sm text-gray-300 hover:text-white transition-all duration-200">
+                        เกี่ยวกับเรา & ติดต่อ
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container (เฉพาะหน้า 2) -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section id="page-apps">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs uppercase tracking-widest text-cyan-400 bg-cyan-950/60 border border-cyan-800/50 px-3 py-1 rounded-full">
+                    Core Categories
+                </span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-3">
+                    การประยุกต์ใช้ <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">3 ด้านหลัก</span>
+                </h1>
+                <p class="text-gray-400 text-base sm:text-lg">
+                    คลิกที่คอลัมน์ด้านล่างเพื่อเปิดดูรายละเอียดและตัวอย่างการนำไปใช้งานจริง
+                </p>
+            </div>
+
+            <!-- Visual Feature Graphic (รูปภาพประกอบสร้างเองในตัว) -->
+            <div class="mb-12 rounded-2xl border border-gray-800 bg-gradient-to-r from-cyan-950/40 via-gray-900 to-purple-950/40 p-8 text-center shadow-xl">
+                <div class="flex justify-center items-center gap-6 mb-4">
+                    <div class="w-14 h-14 bg-cyan-500/10 border border-cyan-500/30 rounded-2xl flex items-center justify-center text-cyan-400 shadow-lg shadow-cyan-500/20">
+                        <i data-lucide="briefcase" class="w-7 h-7"></i>
+                    </div>
+                    <div class="w-12 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500"></div>
+                    <div class="w-14 h-14 bg-purple-500/10 border border-purple-500/30 rounded-2xl flex items-center justify-center text-purple-400 shadow-lg shadow-purple-500/20">
+                        <i data-lucide="activity" class="w-7 h-7"></i>
+                    </div>
+                    <div class="w-12 h-0.5 bg-gradient-to-r from-purple-500 to-sky-500"></div>
+                    <div class="w-14 h-14 bg-sky-500/10 border border-sky-500/30 rounded-2xl flex items-center justify-center text-sky-400 shadow-lg shadow-sky-500/20">
+                        <i data-lucide="palette" class="w-7 h-7"></i>
+                    </div>
+                </div>
+                <h1 class="text-xl font-bold text-white mb-2">ครอบคลุมทุกมิติแห่งการพัฒนาอนาคต</h1>
+                <p class="text-gray-400 text-sm max-w-xl mx-auto">
+                    ผสานพลังเทคโนโลยีปัญญาประดิษฐ์เพื่อยกระดับขีดความสามารถของภาคธุรกิจ การแพทย์ และงานสร้างสรรค์
+                </p>
+            </div>
+
+            <!-- 3 Columns Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Column 1 -->
+                <div onclick="openModal('business')" class="bg-gray-900 border border-gray-800 hover:border-cyan-500/50 p-6 rounded-2xl cursor-pointer transition-all hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-36 mb-6 rounded-xl bg-gradient-to-br from-cyan-950/60 to-gray-950 border border-cyan-500/20 flex flex-col items-center justify-center text-cyan-400">
+                            <i data-lucide="trending-up" class="w-12 h-12 mb-2 opacity-80"></i>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-cyan-300">Business & Industry</span>
+                        </div>
+                        <h1 class="text-xl font-bold text-white mb-2">1. ธุรกิจ & อุตสาหกรรม</h1>
+                        <p class="text-gray-400 text-sm mb-4">การปรับใช้ AI เพื่อเพิ่มประสิทธิภาพงาน การจัดการคลังสินค้า สรุปเอกสาร และการทำนายแนวโน้มตลาด</p>
+                    </div>
+                    <p class="text-cyan-400 text-sm font-medium flex items-center gap-1 mt-2">คลิกดูรายละเอียด <i data-lucide="arrow-right" class="w-4 h-4"></i></p>
+                </div>
+
+                <!-- Column 2 -->
+                <div onclick="openModal('health')" class="bg-gray-900 border border-gray-800 hover:border-purple-500/50 p-6 rounded-2xl cursor-pointer transition-all hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-36 mb-6 rounded-xl bg-gradient-to-br from-purple-950/60 to-gray-950 border border-purple-500/20 flex flex-col items-center justify-center text-purple-400">
+                            <i data-lucide="heart-pulse" class="w-12 h-12 mb-2 opacity-80"></i>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-purple-300">Medical & Healthcare</span>
+                        </div>
+                        <h1 class="text-xl font-bold text-white mb-2">2. การแพทย์ & สุขภาพ</h1>
+                        <p class="text-gray-400 text-sm mb-4">ช่วยวิเคราะห์ภาพถ่ายทางการแพทย์ X-Ray ค้นหาตัวยารักษาใหม่ๆ และระบบประเมินความเสี่ยงผู้ป่วย</p>
+                    </div>
+                    <p class="text-purple-400 text-sm font-medium flex items-center gap-1 mt-2">คลิกดูรายละเอียด <i data-lucide="arrow-right" class="w-4 h-4"></i></p>
+                </div>
+
+                <!-- Column 3 -->
+                <div onclick="openModal('creative')" class="bg-gray-900 border border-gray-800 hover:border-sky-500/50 p-6 rounded-2xl cursor-pointer transition-all hover:-translate-y-1 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-36 mb-6 rounded-xl bg-gradient-to-br from-sky-950/60 to-gray-950 border border-sky-500/20 flex flex-col items-center justify-center text-sky-400">
+                            <i data-lucide="sparkles" class="w-12 h-12 mb-2 opacity-80"></i>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-sky-300">Media & Creative</span>
+                        </div>
+                        <h1 class="text-xl font-bold text-white mb-2">3. สื่อ & งานสร้างสรรค์</h1>
+                        <p class="text-gray-400 text-sm mb-4">Generative AI ช่วยสร้างภาพ เขียนโค้ด ตัดต่อวิดีโอ ออกแบบกราฟิก และสร้างคอนเทนต์สำหรับธุรกิจ</p>
+                    </div>
+                    <p class="text-sky-400 text-sm font-medium flex items-center gap-1 mt-2">คลิกดูรายละเอียด <i data-lucide="arrow-right" class="w-4 h-4"></i></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal System -->
+    <div id="info-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-lg w-full p-6 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <h1 id="modal-title" class="text-2xl font-bold text-white mb-3"></h1>
+            <div id="modal-content" class="text-gray-300 text-sm space-y-3 leading-relaxed mb-6"></div>
+            <button onclick="closeModal()" class="w-full py-2.5 bg-gray-800 hover:bg-gray-700 text-white rounded-xl font-medium">ปิดหน้าต่าง</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800 py-6 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 AI Application Portal - Prachuap Khiri Khan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const modalData = {
+            business: {
+                title: 'AI ในธุรกิจ & อุตสาหกรรม',
+                content: `
+                    <p>• <strong>วิเคราะห์ข้อมูลคาดการณ์:</strong> ช่วยทำนายยอดขาย อุปสงค์สินค้า และพฤติกรรมผู้บริโภค</p>
+                    <p>• <strong>ระบบอัตโนมัติ:</strong> สรุปเอกสาร จัดการอีเมล ตอบคำถามลูกค้า 24/7 ด้วย AI Chatbot</p>
+                    <p>• <strong>บริหารคลังสินค้า:</strong> คำนวณสต็อกล่วงหน้า ช่วยลดต้นทุนการจัดเก็บและการขนส่ง</p>
+                `
+            },
+            health: {
+                title: 'AI ในการแพทย์ & สุขภาพ',
+                content: `
+                    <p>• <strong>วิเคราะห์ภาพถ่ายทางรังสี:</strong> ตรวจหาจุดผิดปกติบนภาพ X-Ray หรือ MRI ได้อย่างรวดเร็วและแม่นยำ</p>
+                    <p>• <strong>คิดค้นและพัฒนายา:</strong> วิเคราะห์โครงสร้างโปรตีนช่วยลดระยะเวลาการวิจัยยาใหม่จากหลายปีเหลือเพียงไม่กี่เดือน</p>
+                    <p>• <strong>ระบบติดตามผู้ป่วย:</strong> ประมวลผลสัญญาณชีพและแจ้งเตือนแพทย์ล่วงหน้าเมื่อพบความเสี่ยง</p>
+                `
+            },
+            creative: {
+                title: 'AI ในสื่อ & งานสร้างสรรค์',
+                content: `
+                    <p>• <strong>Generative Content:</strong> สร้างภาพวาด กราฟิก และคลิปวิดีโอจากข้อความ (Prompt) ในเวลาไม่กี่วินาที</p>
+                    <p>• <strong>ผู้ช่วยเขียนโค้ด:</strong> ช่วยเขียน ตรวจสอบ และสร้างเว็บแอปพลิเคชันได้อย่างรวดเร็ว</p>
+                    <p>• <strong>การสร้างเสียง & ดนตรี:</strong> แปลงข้อความเป็นเสียงพูดธรรมชาติ (Text-to-Speech) หรือแต่งดนตรีประกอบภาพยนตร์</p>
+                `
+            }
+        };
+
+        function openModal(type) {
+            const data = modalData[type];
+            if (data) {
+                document.getElementById('modal-title').innerText = data.title;
+                document.getElementById('modal-content').innerHTML = data.content;
+                document.getElementById('info-modal').classList.remove('hidden');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('info-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
